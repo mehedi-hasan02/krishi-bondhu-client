@@ -4,7 +4,7 @@
 
 /* CSS Document */
 .banner_background {
-  background-image: url("/src/assets/crops/crops.jpg");
+  background-image: url("/src/assets/crops/advanced_crop.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100vw;
 }
