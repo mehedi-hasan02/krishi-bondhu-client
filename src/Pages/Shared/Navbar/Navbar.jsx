@@ -1,6 +1,6 @@
 import { GiFallingLeaf } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/logok.png";
 import { PiSignInFill, PiSignOutBold } from "react-icons/pi";
 
 const Navbar = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
     <div className="navbar bg-transparent">
       {/* --------------------------------------------- */}
       <div className="navbar flex items-center justify-between">
-        <div className=" flex items-center navbar-start">
+        <div className=" navbar-start">
           {/* Mobile device dropdown */}
           <details className="dropdown lg:hidden">
             <summary className="btn bg-transparent border-none">
@@ -38,7 +38,7 @@ const Navbar = () => {
             </ul>
           </details>
           <Link to="/">
-            <img src={logo} className="w-1/2" />
+            <img src={logo} className="w-full lg:w-2/3" />
           </Link>
         </div>
 
