@@ -1,12 +1,11 @@
-import './App.css'
+import Home from "./pages/Home/Home";
 
 function App() {
-
   return (
-    <>
-      <h1 className='text-4xl text-primary'>Hello world</h1>
-    </>
-  )
+    <div className="container mx-auto">
+      <Home></Home>
+    </div>
+  );
 }
 
-export default App
+export default App;
