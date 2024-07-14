@@ -84,9 +84,9 @@ const Navbar = () => {
         >
           <PiSignInFill className="text-white"></PiSignInFill> Login
         </Link>
-        <button className="btn btn-sm text-green-600 bg-inherit border-none">
+        <Link to='/register' className="btn btn-sm text-green-600 bg-inherit border-none">
           <PiSignOutBold className="text-white"></PiSignOutBold> Sign Out
-        </button>
+        </Link>
       </div>
     </div>
   );
