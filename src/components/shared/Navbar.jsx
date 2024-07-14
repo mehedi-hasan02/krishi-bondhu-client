@@ -1,8 +1,7 @@
 import { GiFallingLeaf } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.jpg";
 import { PiSignInFill, PiSignOutBold } from "react-icons/pi";
-import { CiSearch } from "react-icons/ci";
+import { FaCartArrowDown, FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
   const navLinks = (
@@ -16,9 +15,7 @@ const Navbar = () => {
       <li className="text-green-500 hover:text-yellow-500 rounded-md  ">
         <Link to="/contact">Contact</Link>
       </li>
-      <li className="text-green-500 hover:text-yellow-500 rounded-md  ">
-        <Link to="/myCart">My Cart</Link>
-      </li>
+
       <li className="text-green-500 hover:text-yellow-500 rounded-md  ">
         <Link to="/dashboard">Dashboard</Link>
       </li>
@@ -30,7 +27,7 @@ const Navbar = () => {
       <div className="navbar flex items-center justify-between">
         <div className=" navbar-start">
           {/* Mobile device dropdown */}
-          <details className="dropdown lg:hidden">
+          <details className="dropdown md:hidden">
             <summary className="btn bg-transparent border-none">
               <GiFallingLeaf className="text-green-700"></GiFallingLeaf>
             </summary>
@@ -39,7 +36,10 @@ const Navbar = () => {
             </ul>
           </details>
           <Link to="/">
-            <img src={logo} className="w-full lg:w-1/3" />
+            <img
+              src="https://i.ibb.co/5RKgH3K/logo.png"
+              className="w-full md:w-1/3"
+            />
           </Link>
         </div>
 
@@ -54,7 +54,7 @@ const Navbar = () => {
           className=" text-black hover:text-yellow-700 flex items-center"
           onClick={() => document.getElementById("my_modal_5").showModal()}
         >
-          <CiSearch></CiSearch>
+          <FaSearch></FaSearch>
         </button>
         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle ">
           <div className="modal-box flex flex-col gap-3">
@@ -75,6 +75,9 @@ const Navbar = () => {
           </div>
         </dialog>
 
+        <button className="text-black hover:text-yellow-700 flex items-center">
+          <FaCartArrowDown></FaCartArrowDown>
+        </button>
         <Link
           className="btn btn-sm text-green-600 bg-inherit border-none"
           to="/login"
