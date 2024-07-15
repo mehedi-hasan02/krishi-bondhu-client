@@ -5,3 +5,5 @@
     * DaisyUI
     * React Router
     * React Icons
+    * Axios
+    * Firebase
