@@ -3,8 +3,9 @@ import loginImg from "../../assets/loginImg.jpg";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import SocialMedia from "./SocialMedia";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);

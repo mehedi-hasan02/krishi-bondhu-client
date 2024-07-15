@@ -88,7 +88,7 @@ const Navbar = () => {
           to="/register"
           className="px-2 py-1 flex justify-center items-center gap-1 rounded-md      border border-green-400 btn-sm text-green-600 bg-inherit text-center"
         >
-          <PiSignOutBold className="text-green-600"></PiSignOutBold> Sign In
+          <PiSignOutBold className="text-green-600"></PiSignOutBold> Sign Up
         </Link>
       </div>
     </div>
