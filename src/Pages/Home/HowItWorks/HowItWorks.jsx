@@ -1,6 +1,6 @@
 const HowItWorks = () => {
   return (
-    <div className="mx-auto mt-10">
+    <div className="mx-auto mt-10 p-10">
       <div className="flex justify-center items-center gap-10 mb-10 ">
         <hr />
         <h1 className="text-5xl">How It Works...?</h1>
