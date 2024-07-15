@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useForm } from "react-hook-form";
 import loginImg from "../../assets/loginImg.jpg";
 import { useState } from "react";
@@ -8,6 +9,24 @@ import { toast } from "react-toastify";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+=======
+import { useForm } from 'react-hook-form';
+import loginImg from '../../assets/loginImg.jpg';
+import { useState } from 'react';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import SocialMedia from './SocialMedia';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
+import { toast } from 'react-toastify';
+
+const Login = () => {
+    const [showPassword, setShowPassword] = useState(false);
+    const { signIn } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
+>>>>>>> mehedi
 
   const {
     register,
@@ -16,10 +35,29 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
+<<<<<<< HEAD
   const onSubmit = (data) => {
     console.log(data);
     toast.success("Login successful");
   };
+=======
+    const onSubmit = data => {
+        const {email,password} = data;
+        signIn(email, password)
+                .then(result => {
+                    const user = result.user
+                    console.log(user);
+                    toast('Login Successful')
+                    navigate(from, { replace: true })
+                })
+                .catch((error) => {
+
+                    {
+                        toast.error('Invalid Email and Password');
+                    }
+                })
+    }
+>>>>>>> mehedi
 
   return (
     <div className="min-h-screen relative">
