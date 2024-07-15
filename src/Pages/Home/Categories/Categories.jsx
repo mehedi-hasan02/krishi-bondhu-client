@@ -15,10 +15,10 @@ const Categories = () => {
       });
   }, []);
   return (
-    <div className="mt-10 p-10">
+    <div className="my-10 w-11/12 mx-auto ">
       <h3 className="text-4xl font-semibold text-center">Categories</h3>
-      <hr />
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
+
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-10 pt-5">
         {categories.map((category) => (
           <Category key={category.id} category={category}></Category>
         ))}
