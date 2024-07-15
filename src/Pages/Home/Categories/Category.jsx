@@ -1,5 +1,4 @@
 const Category = ({ category }) => {
-  console.log(category);
   return (
     <div className="text-center p-10 timeline-box">
       <img className="w-24 mx-auto rounded-md" src={category?.img} />

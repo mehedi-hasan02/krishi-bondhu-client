@@ -2,8 +2,11 @@ import { GiFallingLeaf } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { PiSignInFill, PiSignOutBold } from "react-icons/pi";
 import { FaCartArrowDown, FaSearch } from "react-icons/fa";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const { users, logOut } = useContext(AuthContext);
   const navLinks = (
     <>
       <li className="text-green-500 hover:text-yellow-500 rounded-md ">
@@ -78,18 +81,29 @@ const Navbar = () => {
         <button className="text-black hover:text-yellow-700 flex items-center">
           <FaCartArrowDown></FaCartArrowDown>
         </button>
-        <Link
-          className=" px-2 py-1 flex justify-center items-center gap-1 rounded-md    border border-green-400 text-green-600 bg-inherit  "
-          to="/login"
-        >
-          <PiSignInFill className="text-green"></PiSignInFill> Login
-        </Link>
-        <Link
-          to="/register"
-          className="px-2 py-1 flex justify-center items-center gap-1 rounded-md      border border-green-400 btn-sm text-green-600 bg-inherit text-center"
-        >
-          <PiSignOutBold className="text-green-600"></PiSignOutBold> Sign Up
-        </Link>
+        {users ? (
+          <button
+            onClick={logOut}
+            className="px-2 py-1 flex justify-center items-center gap-1 rounded-md    border border-green-400 text-green-600 bg-inherit"
+          >
+            Logout
+          </button>
+        ) : (
+          <div className="flex items-center gap-3">
+            <Link
+              className=" px-2 py-1 flex justify-center items-center gap-1 rounded-md    border border-green-400 text-green-600 bg-inherit  "
+              to="/login"
+            >
+              <PiSignInFill className="text-green"></PiSignInFill> Login
+            </Link>
+            <Link
+              to="/register"
+              className="px-2 py-1 flex justify-center items-center gap-1 rounded-md      border border-green-400 btn-sm text-green-600 bg-inherit text-center"
+            >
+              <PiSignOutBold className="text-green-600"></PiSignOutBold> Sign Up
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
