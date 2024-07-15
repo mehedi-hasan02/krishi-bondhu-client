@@ -1,3 +1,5 @@
+import React from "react";
+import Footer from "../Shared/Footer/Footer";
 import Carousel from "../Shared/Navbar/Carousel";
 import Categories from "./Categories/Categories";
 import HowItWorks from "./HowItWorks/HowItWorks";
@@ -13,12 +15,13 @@ const Home = () => {
             Healthy
           </span> <br /> Organic Food
         </h1>
-        <button className="btn btn-success text-white mb-4 mx-10">
+        <button className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md transition duration-300 mx-10">
           Discover more
         </button>
       </div>
-      <HowItWorks></HowItWorks>
-      <Categories></Categories>
+      <HowItWorks />
+      <Categories />
+      <Footer />
     </div>
   );
 };
