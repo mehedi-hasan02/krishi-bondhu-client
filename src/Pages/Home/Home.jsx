@@ -1,4 +1,5 @@
 import Carousel from "../Shared/Navbar/Carousel";
+import Categories from "./Categories/Categories";
 import HowItWorks from "./HowItWorks/HowItWorks";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
         </button>
       </div>
       <HowItWorks></HowItWorks>
+      <Categories></Categories>
     </div>
   );
 };

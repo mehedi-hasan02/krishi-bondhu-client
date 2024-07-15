@@ -1,8 +1,10 @@
 const HowItWorks = () => {
   return (
-    <div className="mx-auto">
+    <div className="mx-auto mt-10">
       <div className="flex justify-center items-center gap-10 mb-10 ">
+        <hr />
         <h1 className="text-5xl">How It Works...?</h1>
+        <hr />
         <img
           src="https://i.ibb.co/4WD3B9z/How-might-we-workshop-template-Community-2.jpg"
           className="w-24"
