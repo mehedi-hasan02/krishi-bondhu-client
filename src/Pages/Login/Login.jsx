@@ -3,11 +3,17 @@ import loginImg from "../../assets/loginImg.jpg";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import SocialMedia from "./SocialMedia";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const { signIn } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
 
   const {
     register,
@@ -17,8 +23,19 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
-    toast.success("Login successful");
+    const { email, password } = data;
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast.success("Login successful");
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        {
+          toast.error("Invalid Email and Password");
+        }
+      });
   };
 
   return (

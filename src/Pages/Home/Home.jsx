@@ -21,6 +21,7 @@ const Home = () => {
       </div>
       <HowItWorks />
       <Categories />
+     
       <Footer />
     </div>
   );

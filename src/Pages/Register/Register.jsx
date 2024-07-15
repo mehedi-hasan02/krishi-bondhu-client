@@ -3,9 +3,16 @@ import { useForm } from "react-hook-form";
 import regImg from '../../assets/loginImg.jpg'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
+import { toast } from "react-toastify";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
+const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
+    const { createUser, handleUpdateProfile, logOut } = useAuth();
+    const axiosPublic = useAxiosPublic();
 
     const {
         register,
@@ -14,8 +21,29 @@ const Register = () => {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = data => {
-        console.log(data);
+    const onSubmit = async (data) => {
+        const { name, email, password, image } = data;
+        const imageFile = { image: data.image[0] };
+        const res = await axiosPublic.post(image_hosting_api, imageFile, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        });
+
+        if (res.data.success) {
+            const imageUrl = res.data.data.display_url;
+
+            createUser(email, password)
+                .then(res => {
+                    handleUpdateProfile(name, imageUrl)
+                    logOut()
+                    toast.success('User Create Successful')
+                    console.log(res.user);
+                })
+                .catch(error => {
+                })
+        }
+
     }
     return (
         <div className='min-h-screen relative'>
