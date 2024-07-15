@@ -22,7 +22,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-white">
+    <div className="navbar w-11/12 mx-auto bg-white">
       {/* --------------------------------------------- */}
       <div className="navbar flex items-center justify-between">
         <div className=" navbar-start">
@@ -79,16 +79,16 @@ const Navbar = () => {
           <FaCartArrowDown></FaCartArrowDown>
         </button>
         <Link
-          className="btn btn-sm text-green-600 bg-inherit border-none"
+          className=" px-2 py-1 flex justify-center items-center gap-1 rounded-md    border border-green-400 text-green-600 bg-inherit  "
           to="/login"
         >
-          <PiSignInFill className="text-white"></PiSignInFill> Login
+          <PiSignInFill className="text-green"></PiSignInFill> Login
         </Link>
         <Link
           to="/register"
-          className="btn btn-sm text-green-600 bg-inherit border-none"
+          className="px-2 py-1 flex justify-center items-center gap-1 rounded-md      border border-green-400 btn-sm text-green-600 bg-inherit text-center"
         >
-          <PiSignOutBold className="text-white"></PiSignOutBold> Sign In
+          <PiSignOutBold className="text-green-600"></PiSignOutBold> Sign In
         </Link>
       </div>
     </div>
