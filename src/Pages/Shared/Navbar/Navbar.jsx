@@ -27,11 +27,11 @@ const Navbar = () => {
       <div className="navbar flex items-center justify-between">
         <div className=" navbar-start">
           {/* Mobile device dropdown */}
-          <details className="dropdown md:hidden">
+          <details className="dropdown lg:hidden">
             <summary className="btn bg-transparent border-none">
               <GiFallingLeaf className="text-green-700"></GiFallingLeaf>
             </summary>
-            <ul className="menu dropdown-content bg-transparent rounded-box z-[1] w-52  ">
+            <ul className="menu dropdown-content bg-white rounded-box z-[1] w-52  ">
               {navLinks}
             </ul>
           </details>
@@ -84,8 +84,11 @@ const Navbar = () => {
         >
           <PiSignInFill className="text-white"></PiSignInFill> Login
         </Link>
-        <Link to='/register' className="btn btn-sm text-green-600 bg-inherit border-none">
-          <PiSignOutBold className="text-white"></PiSignOutBold> Sign Out
+        <Link
+          to="/register"
+          className="btn btn-sm text-green-600 bg-inherit border-none"
+        >
+          <PiSignOutBold className="text-white"></PiSignOutBold> Sign In
         </Link>
       </div>
     </div>
