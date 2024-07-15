@@ -1,3 +1,4 @@
+import Footer from "../Shared/Footer/Footer";
 import Carousel from "../Shared/Navbar/Carousel";
 import Categories from "./Categories/Categories";
 import HowItWorks from "./HowItWorks/HowItWorks";
@@ -19,6 +20,7 @@ const Home = () => {
       </div>
       <HowItWorks></HowItWorks>
       <Categories></Categories>
+      <Footer />
     </div>
   );
 };
