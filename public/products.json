@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Potato",
+    "price_per_kg": 30,
+    "unit": "BDT",
+    "image_url": "https://i.ibb.co/ypHsTQb/Potato-Varieties-660x330.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Tomato",
+    "price_per_kg": 60,
+    "unit": "BDT",
+    "image_url": "https://i.ibb.co/TtHWKmv/image-112131-1677149244.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Onion",
+    "price_per_kg": 50,
+    "unit": "BDT",
+    "image_url": "https://i.ibb.co/ng3QFZP/36ba42a41c099a110a9ff82216e95b8c-65f422f77233a.webp"
+  },
+  {
+    "id": 4,
+    "name": "Eggplant",
+    "price_per_kg": 45,
+    "unit": "BDT",
+    "image_url": "https://i.ibb.co/T0QNTYf/15-Md-Sahajahan-Ali-and-his-son-sm.webp"
+  },
+  {
+    "id": 5,
+    "name": "Green Chili",
+    "price_per_kg": 200,
+    "unit": "BDT",
+    "image_url": "https://i.ibb.co/ZS4gw2Y/green-chilli.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Spinach",
+    "price_per_bundle": 20,
+    "unit": "BDT",
+    "image_url": "https://i.ibb.co/6bx2QKP/71-Yvv-Z2-Fm-PL-AC-SL1200.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Cabbage",
+    "price_per_kg": 40,
+    "unit": "BDT",
+    "image_url": "https://i.ibb.co/XtQF9Sg/image-150571-1696319540.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Cauliflower",
+    "price_per_piece": 25,
+    "unit": "BDT",
+    "image_url": "https://i.ibb.co/58SLBLL/Cauliflower-sq.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Carrot",
+    "price_per_kg": 60,
+    "unit": "BDT",
+    "image_url": "https://i.ibb.co/JssGLfx/carot-final.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Radish",
+    "price_per_kg": 35,
+    "unit": "BDT",
+    "image_url": "https://i.ibb.co/B3DFxt2/fresh-radish-1000x1000.jpg"
+  }
+]
