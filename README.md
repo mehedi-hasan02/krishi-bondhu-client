@@ -7,3 +7,4 @@
     * React Icons
     * Axios
     * Firebase
+    * SwiperJs

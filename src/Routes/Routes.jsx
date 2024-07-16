@@ -9,6 +9,7 @@ import Error from "../Pages/Shared/ErrorPage/Error";
 import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
 import ProductList from "../Pages/ProductList/ProductList";
 import AddProduct from "../Pages/AddProduct/AddProduct";
+import EditProduct from "../Pages/EditProduct/EditProduct";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/products/add",
         element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "/edit",
+        element: <EditProduct></EditProduct>,
       },
     ],
   },
