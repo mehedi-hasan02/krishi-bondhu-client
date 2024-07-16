@@ -8,6 +8,7 @@ import Error from "../Pages/Shared/ErrorPage/Error";
 
 import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
 import ProductList from "../Pages/ProductList/ProductList";
+import AddProduct from "../Pages/AddProduct/AddProduct";
 
 const router = createBrowserRouter([
   {
@@ -36,8 +37,12 @@ const router = createBrowserRouter([
         element: <PrivacyPolicy></PrivacyPolicy>,
       },
       {
-        path: "/productList",
+        path: "/myCart",
         element: <ProductList></ProductList>,
+      },
+      {
+        path: "/products/add",
+        element: <AddProduct></AddProduct>,
       },
     ],
   },

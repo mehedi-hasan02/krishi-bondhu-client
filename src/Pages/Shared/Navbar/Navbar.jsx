@@ -1,4 +1,3 @@
-import { GiFallingLeaf } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { PiSignInFill, PiSignOutBold } from "react-icons/pi";
 import { FaCartArrowDown, FaSearch } from "react-icons/fa";
@@ -22,6 +21,9 @@ const Navbar = () => {
       <li className="text-green-500 hover:text-yellow-500 rounded-md  ">
         <Link to="/dashboard">Dashboard</Link>
       </li>
+      <li className="text-green-500 hover:text-yellow-500 rounded-md  ">
+        <Link to="/products/add">Add New Product</Link>
+      </li>
     </>
   );
   return (
@@ -29,19 +31,59 @@ const Navbar = () => {
       {/* --------------------------------------------- */}
       <div className="navbar flex items-center justify-between">
         <div className=" navbar-start">
-          {/* Mobile device dropdown */}
-          <details className="dropdown lg:hidden">
-            <summary className="btn bg-transparent border-none">
-              <GiFallingLeaf className="text-green-700"></GiFallingLeaf>
-            </summary>
-            <ul className="menu dropdown-content bg-white rounded-box z-[1] w-52  ">
-              {navLinks}
-            </ul>
-          </details>
+          {/* Mobile device drawer */}
+          <div className="drawer lg:hidden mr-5">
+            <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content flex flex-col">
+              {/* Navbar */}
+              <div className="navbar  w-full">
+                <div className="flex-none lg:hidden">
+                  <label
+                    htmlFor="my-drawer-3"
+                    aria-label="open sidebar"
+                    className="btn btn-square btn-ghost mr-10"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      className="inline-block h-6 w-6 stroke-current"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+                <div className="mx-2 flex-1 px-2"></div>
+                <div className="hidden flex-none lg:block">
+                  <ul className="menu menu-horizontal">
+                    {/* Navbar menu content here */}
+                    {navLinks}
+                  </ul>
+                </div>
+              </div>
+              {/* Page content here */}
+            </div>
+            <div className="drawer-side">
+              <label
+                htmlFor="my-drawer-3"
+                aria-label="close sidebar"
+                className="drawer-overlay"
+              ></label>
+              <ul className="menu bg-base-200 min-h-full w-80 p-4">
+                {/* Sidebar content here */}
+                {navLinks}
+              </ul>
+            </div>
+          </div>
           <Link to="/">
             <img
               src="https://i.ibb.co/5RKgH3K/logo.png"
-              className="w-full md:w-1/3"
+              className="w-full md:w-1/3 mx-5"
             />
           </Link>
         </div>
@@ -79,7 +121,9 @@ const Navbar = () => {
         </dialog>
 
         <button className="text-black hover:text-yellow-700 flex items-center">
-          <FaCartArrowDown></FaCartArrowDown>
+          <Link to="/myCart">
+            <FaCartArrowDown></FaCartArrowDown>
+          </Link>
         </button>
         {users ? (
           <button
@@ -100,7 +144,7 @@ const Navbar = () => {
               to="/register"
               className="px-2 py-1 flex justify-center items-center gap-1 rounded-md      border border-green-400 btn-sm text-green-600 bg-inherit text-center"
             >
-              <PiSignOutBold className="text-green-600"></PiSignOutBold> Sign Up
+              <PiSignOutBold className="text-green-600"></PiSignOutBold> SignUp
             </Link>
           </div>
         )}

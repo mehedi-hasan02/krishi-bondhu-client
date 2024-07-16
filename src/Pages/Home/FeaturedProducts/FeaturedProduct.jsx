@@ -13,7 +13,7 @@ const FeaturedProduct = ({ product }) => {
           Price per KG: {price_per_kg} {unit}
         </p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">
+          <button className="btn btn-success text-white">
             Add to Cart <FaCartPlus />{" "}
           </button>
         </div>

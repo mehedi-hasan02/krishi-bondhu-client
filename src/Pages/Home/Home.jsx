@@ -14,8 +14,6 @@ const Home = () => {
     .catch((err) => err.message);
   return (
     <div>
-      <Slider></Slider>
-      <Categories />
       <div className="my-10 px-10 text-white bg-gradient-to-r from-[#151515] to-transparent py-full ">
         <h1 className="text-3xl md:text-5xl font-semibold p-10 pt-28">
           Natural Products <br />
@@ -27,6 +25,8 @@ const Home = () => {
           Discover more
         </button>
       </div>
+      <Slider></Slider>
+      <Categories />
       <FeatureProducts products={products}></FeatureProducts>
       <HowItWorks />
 
