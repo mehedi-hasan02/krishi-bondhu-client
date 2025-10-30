@@ -1,6 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FooterLink } from "../../../data/FooterLinks";
 import { GiFallingLeaf } from "react-icons/gi";
 
@@ -16,142 +15,113 @@ const Resources = [
 
 const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
 
-const Plans = ["Paid Memberships", "For Whole-sell", "Business Solutions"];
-const Community = ["Forums", "Chapters", "Events"];
-
 const Footer = () => {
   return (
-    <div className="bg-gray-800">
-      <h1 className="text-white w-11/12 pt-5 mx-auto">
-        <div className="lg:pl-6 -pb-6 ">
-          <Link to="/">
-            <img
-              src="https://i.ibb.co/5RKgH3K/logo.png"
-              className="w-40 h-10 rounded-3xl grayscale hover:grayscale-0 hover:scale-105  transition-all duration-400"
-            />
-          </Link>
-        </div>
-      </h1>
-      <div className="flex flex-col lg:flex-row gap-8 items-center justify-between w-11/12 max-w- text-gray-400 leading-6 mx-auto relative pt-8 pb-14">
-        <div className="w-full  space-y-4 flex flex-col lg:flex-row pb-5 border-b border-gray-700">
-          <div className="lg:w-1/2 w-full grid grid-cols-2  justify-between lg:border-r border-gray-700 lg:pl-6 lg:pr-5 gap-3 ">
-            <div className="flex flex-col gap-3 w-full   mb-7  ">
-              <h1 className="text-gray-50 font-semibold text-lg">About Us</h1>
-              <div className="flex flex-col gap-2">
-                {["Our Story", "Team", "Partners"].map((ele, i) => (
-                  <Link
-                    key={i}
-                    to={ele.replace(/\s+/g, "-").toLowerCase()}
-                    className="text-sm cursor-pointer hover:text-gray-50 transition-all duration-200"
-                  >
-                    {ele}
-                  </Link>
-                ))}
-              </div>
-
-              <div className="flex gap-3 text-lg mt-4 ">
-                <FaFacebook className="cursor-pointer hover:text-gray-50 transition-all duration-20" />
-                <FaTwitter className="cursor-pointer hover:text-gray-50 transition-all duration-20" />
-                <FaYoutube className="cursor-pointer hover:text-gray-50 transition-all duration-20" />
-              </div>
+    <div className="bg-gray-900 text-white animate__animated animate__fadeIn">
+      <div className="w-11/12 mx-auto pt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+          {/* Company Info */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <GiFallingLeaf className="text-green-500 text-3xl" />
+              <h2 className="text-2xl font-bold">Krishi Bondhu</h2>
             </div>
-
-            <div className="flex flex-col gap-3 w-full   mb-7 ">
-              <h1 className="text-gray-50 font-semibold text-lg">Resources</h1>
-              <div className="flex flex-col gap-2 mt-2">
-                {Resources.map((ele, index) => (
-                  <Link
-                    key={index}
-                    to={ele.replace(/\s+/g, "-").toLowerCase()}
-                    className="text-sm cursor-pointer hover:text-gray-50 transition-all duration-200"
-                  >
-                    {ele}
-                  </Link>
-                ))}
-              </div>
-              <h1 className="text-gray-50 font-semibold text-lg mt-7">
-                Support
-              </h1>
-              <Link
-                to="/help-center"
-                className="text-sm cursor-pointer hover:text-gray-50 transition-all duration-200 mt-2"
-              >
-                Help Center
-              </Link>
-            </div>
-
-            <div className="flex flex-col gap-3 w-full   mb-7 ">
-              <h1 className="text-gray-50 font-semibold text-lg">Plans</h1>
-              <div className="flex flex-col gap-2 mt-2">
-                {Plans.map((ele, index) => (
-                  <Link
-                    key={index}
-                    to={ele.replace(/\s+/g, "-").toLowerCase()}
-                    className="text-sm cursor-pointer hover:text-gray-50 transition-all duration-200"
-                  >
-                    {ele}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="flex flex-col gap-3 w-full   mb-7 ">
-              <h1 className="text-gray-50 font-semibold text-lg ">Community</h1>
-              <div className="flex flex-col gap-2 mt-2">
-                {Community.map((ele, index) => (
-                  <Link
-                    key={index}
-                    to={ele.replace(/\s+/g, "-").toLowerCase()}
-                    className="text-sm cursor-pointer hover:text-gray-50 transition-all duration-200"
-                  >
-                    {ele}
-                  </Link>
-                ))}
-              </div>
+            <p className="text-gray-400">
+              Connecting farmers and consumers for a sustainable future. 
+              Fresh, organic produce delivered from farm to table.
+            </p>
+            <div className="flex gap-4">
+              <FaFacebook className="text-xl cursor-pointer hover:text-green-500 transition-colors duration-300" />
+              <FaTwitter className="text-xl cursor-pointer hover:text-green-500 transition-colors duration-300" />
+              <FaInstagram className="text-xl cursor-pointer hover:text-green-500 transition-colors duration-300" />
+              <FaYoutube className="text-xl cursor-pointer hover:text-green-500 transition-colors duration-300" />
+              <FaLinkedin className="text-xl cursor-pointer hover:text-green-500 transition-colors duration-300" />
             </div>
           </div>
 
-          {/* Section 2 */}
-          <div className="lg:w-1/2  w-full grid grid-cols-2 justify-between   lg:pl-5 gap-3 ">
-            {FooterLink.map((ele, i) => (
-              <div key={i} className="flex flex-col gap-3 w-full lg:w-1/3 mb-7">
-                <h1 className="text-gray-50 font-semibold text-lg">
-                  {ele.title}
-                </h1>
-                <div className="flex flex-col gap-2 mt-2">
-                  {ele.links.map((link, index) => (
-                    <Link
-                      key={index}
-                      to={link.link}
-                      className="text-sm cursor-pointer hover:text-gray-50 transition-all duration-200"
-                    >
-                      {link.title}
-                    </Link>
-                  ))}
+          {/* Resources */}
+          <div>
+            <h3 className="text-xl font-semibold mb-6">Resources</h3>
+            <ul className="space-y-3">
+              {Resources.map((item, index) => (
+                <li key={index}>
+                  <Link 
+                    to={`/${item.replace(/\s+/g, "-").toLowerCase()}`} 
+                    className="text-gray-400 hover:text-green-500 transition-colors duration-300"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
+            <div className="grid grid-cols-2 gap-3">
+              {FooterLink.map((section, index) => (
+                <div key={index}>
+                  <h4 className="font-medium mb-3">{section.title}</h4>
+                  <ul className="space-y-2">
+                    {section.links.map((link, linkIndex) => (
+                      <li key={linkIndex}>
+                        <Link 
+                          to={link.link} 
+                          className="text-gray-400 hover:text-green-500 text-sm transition-colors duration-300"
+                        >
+                          {link.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h3 className="text-xl font-semibold mb-6">Newsletter</h3>
+            <p className="text-gray-400 mb-4">
+              Subscribe to our newsletter for the latest updates and offers.
+            </p>
+            <div className="flex">
+              <input 
+                type="email" 
+                placeholder="Your email" 
+                className="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800"
+              />
+              <button className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-r-lg transition-colors duration-300">
+                Join
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-between w-11/12 max-w- text-gray-400 mx-auto pb-14 text-sm">
         {/* Bottom Footer */}
-        <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-3">
-          <div className="flex flex-row gap-3">
-            {BottomFooter.map((ele, i) => (
-              <Link
-                key={i}
-                to={ele.replace(/\s+/g, "-").toLowerCase()}
-                className={`px-3 ${
-                  i < BottomFooter.length - 1 ? "border-r border-gray-700" : ""
-                } cursor-pointer hover:text-gray-50 transition-all duration-200`}
+        <div className="border-t border-gray-800 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-gray-500 text-sm">
+              © {new Date().getFullYear()} Krishi Bondhu. All rights reserved.
+            </div>
+            <div className="flex gap-6">
+              {BottomFooter.map((item, index) => (
+                <Link 
+                  key={index}
+                  to={`/${item.replace(/\s+/g, "-").toLowerCase()}`}
+                  className="text-gray-500 hover:text-green-500 text-sm transition-colors duration-300"
+                >
+                  {item}
+                </Link>
+              ))}
+              <Link 
+                to="/contact"
+                className="text-gray-500 hover:text-green-500 text-sm transition-colors duration-300"
               >
-                {ele}
+                Contact Us
               </Link>
-            ))}
-          </div>
-          <div className="text-center">
-            Made with © {new Date().getFullYear()} KrishiBondu
+            </div>
           </div>
         </div>
       </div>

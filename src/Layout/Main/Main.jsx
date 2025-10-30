@@ -4,10 +4,23 @@ import { ToastContainer } from "react-toastify";
 
 const Main = () => {
   return (
-    <div>
-      <Navbar/>
-      <Outlet/>
-      <ToastContainer/>
+    <div className="min-h-screen flex flex-col bg-gray-50">
+      <Navbar />
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+      <ToastContainer 
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 };
