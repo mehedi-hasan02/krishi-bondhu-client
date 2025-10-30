@@ -10,6 +10,8 @@ import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
 import ProductList from "../Pages/ProductList/ProductList";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import EditProduct from "../Pages/EditProduct/EditProduct";
+import Contact from "../Pages/Contact/Contact";
+import Roadmap from "../Pages/Roadmap/Roadmap";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutUs></AboutUs>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
+      },
+      {
+        path: "/roadmap",
+        element: <Roadmap></Roadmap>,
       },
       {
         path: "/privacy-policy",
