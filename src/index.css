@@ -2,7 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CSS Document */
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Banner Background */
 .banner_background {
   background-image: url("/src/assets/crops/advanced_crop.jpg");
   background-repeat: no-repeat;
